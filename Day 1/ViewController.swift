@@ -30,7 +30,7 @@ class ViewController: UIViewController
     }
     @IBAction func btn_Submit_Action(_ sender: UIButton) {
         print("Submit Button Clicked")
-        
+        print("Test message for Github setup")
         self.Show_Alert()
 //        let txt_test = UITextField()
 //        txt_test.text = "abcdefg"
