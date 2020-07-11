@@ -16,7 +16,7 @@ class ImagepickerVC: UIViewController,UINavigationControllerDelegate
     @IBOutlet var btn_submit: UIButton!
     
     let imagepicker : UIImagePickerController = UIImagePickerController()
-    
+    var Arr_Test : NSMutableArray = NSMutableArray()
     override func viewDidLoad()
     {
         super.viewDidLoad()
