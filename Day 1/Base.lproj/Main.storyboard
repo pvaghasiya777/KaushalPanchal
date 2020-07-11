@@ -111,9 +111,18 @@
                                     <constraint firstItem="ato-0j-vQK" firstAttribute="leading" secondItem="0Gl-Fz-8BC" secondAttribute="leading" constant="16" id="uys-kb-6kW"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="u5M-MF-OML">
+                                <rect key="frame" x="160" y="645" width="55" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="85L-wj-QuC"/>
+                                    <constraint firstAttribute="height" constant="50" id="OBj-o9-knt"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="u5M-MF-OML" firstAttribute="centerX" secondItem="Ibg-3q-pvA" secondAttribute="centerX" id="6di-nj-ObE"/>
+                            <constraint firstItem="u5M-MF-OML" firstAttribute="top" secondItem="0Gl-Fz-8BC" secondAttribute="bottom" constant="8" id="NCL-c8-95F"/>
                             <constraint firstItem="0Gl-Fz-8BC" firstAttribute="centerX" secondItem="Ibg-3q-pvA" secondAttribute="centerX" id="XnN-e8-yOW"/>
                             <constraint firstItem="0Gl-Fz-8BC" firstAttribute="centerY" secondItem="Ibg-3q-pvA" secondAttribute="centerY" id="hqh-lT-CtR"/>
                             <constraint firstItem="0Vg-wI-EVc" firstAttribute="trailing" secondItem="0Gl-Fz-8BC" secondAttribute="trailing" constant="16" id="wX6-xF-Jd8"/>
@@ -127,6 +136,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Progress" destination="u5M-MF-OML" id="enK-yu-1I8"/>
                         <outlet property="btn_Delete" destination="UTh-Gi-QiE" id="ffs-we-8km"/>
                         <outlet property="btn_submit" destination="ato-0j-vQK" id="gm4-rd-W8m"/>
                         <outlet property="lbl_Title" destination="vsw-MO-1h0" id="ouT-wq-Suv"/>
@@ -199,10 +209,54 @@
             </objects>
             <point key="canvasLocation" x="1238" y="100"/>
         </scene>
+        <!--ImagepickerVC-->
+        <scene sceneID="w7P-P8-G4z">
+            <objects>
+                <viewController storyboardIdentifier="ImagepickerVC" id="om0-Pb-9ly" customClass="ImagepickerVC" customModule="Day_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zkQ-A9-ljx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_test" translatesAutoresizingMaskIntoConstraints="NO" id="hN4-JX-IQM">
+                                <rect key="frame" x="37.666666666666657" y="331" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0n1-Pg-z0h"/>
+                                    <constraint firstAttribute="height" constant="150" id="u0r-BV-EQm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gH-bG-0fg">
+                                <rect key="frame" x="127.66666666666669" y="489" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="O8T-1Q-USK"/>
+                                    <constraint firstAttribute="height" constant="30" id="pL6-8T-eqC"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="btn_image_picker:" destination="om0-Pb-9ly" eventType="touchUpInside" id="qBL-Be-abN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4gH-bG-0fg" firstAttribute="centerX" secondItem="zkQ-A9-ljx" secondAttribute="centerX" id="5Yj-bg-bku"/>
+                            <constraint firstItem="hN4-JX-IQM" firstAttribute="centerX" secondItem="zkQ-A9-ljx" secondAttribute="centerX" id="E7W-0N-FYK"/>
+                            <constraint firstItem="hN4-JX-IQM" firstAttribute="centerY" secondItem="zkQ-A9-ljx" secondAttribute="centerY" id="EuD-wD-H3d"/>
+                            <constraint firstItem="4gH-bG-0fg" firstAttribute="top" secondItem="hN4-JX-IQM" secondAttribute="bottom" constant="8" id="xA5-bl-qzH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AfS-ny-KsV"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_submit" destination="4gH-bG-0fg" id="mLy-Xa-Guu"/>
+                        <outlet property="img_view" destination="hN4-JX-IQM" id="jNo-Yk-Yid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="syg-Ae-miV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="103"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="w8J-A8-yUn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dhp-Wm-XEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="zhN-A3-CiL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A5C-U9-zoA">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -212,6 +266,7 @@
                         <segue destination="Jjb-ZW-P98" kind="relationship" relationship="rootViewController" id="IhK-Ya-wqX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhp-Wm-XEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-177" y="100"/>
         </scene>
@@ -232,6 +287,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_test" width="500" height="333.33334350585938"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
 </document>

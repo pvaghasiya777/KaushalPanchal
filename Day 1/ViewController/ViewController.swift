@@ -19,8 +19,10 @@ class ViewController: UIViewController
     @IBOutlet var txt_age: UITextField!
     @IBOutlet var btn_submit: UIButton!
     @IBOutlet var lbl_result: UILabel!
+    @IBOutlet var Progress: UIActivityIndicatorView!
     
     var Arr_Full_Detail : NSMutableArray = NSMutableArray()
+    let Story : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,7 +33,10 @@ class ViewController: UIViewController
     @IBAction func btn_Submit_Action(_ sender: UIButton) {
         print("Submit Button Clicked")
         print("Test message for Github setup")
+        Progress.color  = .systemRed
+        Progress.startAnimating()
         self.Show_Alert()
+        
 //        let txt_test = UITextField()
 //        txt_test.text = "abcdefg"
 //
@@ -51,16 +56,19 @@ class ViewController: UIViewController
     func Show_Alert() {
         let alert = UIAlertController(title: "Sign Out", message: "You can alaways acces your content by singing click", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: {_ in }))
-//        alert.addAction(UIAlertAction(title: "Edit", style: .default, handler: {(_: UIAlertAction!)in
-//                print("ok button click")
-//        }))
-//        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: {(_: UIAlertAction!)in
-//                print("ok button click")
-//        }))
+        alert.addAction(UIAlertAction(title: "Edit", style: .default, handler: {(_: UIAlertAction!)in
+                print("ok button click")
+            let Next_VC = self.Story.instantiateViewController(withIdentifier: "ImagepickerVC") as! ImagepickerVC
+            self.navigationController?.pushViewController(Next_VC, animated: true)
+            
+            self.Progress.stopAnimating()
+        }))
+        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: {(_: UIAlertAction!)in
+                print("ok button click")
+        }))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(_: UIAlertAction!)in
                 print("ok button click")
-            let Story : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let Next_VC = Story.instantiateViewController(withIdentifier: "NextVC") as! NextVC
+            let Next_VC = self.Story.instantiateViewController(withIdentifier: "NextVC") as! NextVC
             self.navigationController?.pushViewController(Next_VC, animated: true)
         }))
 //        alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: {(_: UIAlertAction!)in

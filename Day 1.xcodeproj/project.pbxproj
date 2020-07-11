@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41EC6FB24B9B72300AAEE7E /* ImagepickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41EC6FA24B9B72300AAEE7E /* ImagepickerVC.swift */; };
 		E422A14024B0E6A200B5970D /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E422A13F24B0E6A200B5970D /* ImageVC.swift */; };
 		E439CCA724B081A4009F4F16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439CCA624B081A4009F4F16 /* AppDelegate.swift */; };
 		E439CCA924B081A4009F4F16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439CCA824B081A4009F4F16 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41EC6FA24B9B72300AAEE7E /* ImagepickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagepickerVC.swift; sourceTree = "<group>"; };
 		E422A13F24B0E6A200B5970D /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		E439CCA324B081A4009F4F16 /* Day 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E439CCA624B081A4009F4F16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41EC6FC24B9B8DB00AAEE7E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E439CCAA24B081A4009F4F16 /* ViewController.swift */,
+				E4BFFEFE24B1A56A00433642 /* NextVC.swift */,
+				E422A13F24B0E6A200B5970D /* ImageVC.swift */,
+				E41EC6FA24B9B72300AAEE7E /* ImagepickerVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		E439CC9A24B081A4009F4F16 = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +75,7 @@
 			children = (
 				E439CCA624B081A4009F4F16 /* AppDelegate.swift */,
 				E439CCA824B081A4009F4F16 /* SceneDelegate.swift */,
-				E439CCAA24B081A4009F4F16 /* ViewController.swift */,
-				E4BFFEFE24B1A56A00433642 /* NextVC.swift */,
-				E422A13F24B0E6A200B5970D /* ImageVC.swift */,
+				E41EC6FC24B9B8DB00AAEE7E /* ViewController */,
 				E439CCAC24B081A4009F4F16 /* Main.storyboard */,
 				E439CCAF24B081A6009F4F16 /* Assets.xcassets */,
 				E439CCB124B081A6009F4F16 /* LaunchScreen.storyboard */,
@@ -146,6 +157,7 @@
 			files = (
 				E422A14024B0E6A200B5970D /* ImageVC.swift in Sources */,
 				E439CCAB24B081A4009F4F16 /* ViewController.swift in Sources */,
+				E41EC6FB24B9B72300AAEE7E /* ImagepickerVC.swift in Sources */,
 				E439CCA724B081A4009F4F16 /* AppDelegate.swift in Sources */,
 				E4BFFEFF24B1A56A00433642 /* NextVC.swift in Sources */,
 				E439CCA924B081A4009F4F16 /* SceneDelegate.swift in Sources */,
